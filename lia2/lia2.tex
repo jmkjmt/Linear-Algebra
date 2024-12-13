@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{kotex}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\mathmode}[1]{\relax\ifmmode#1\else$#1$\fi}
+\newcommand{\well}{\mathmode{W}}
+
+\theoremstyle{plain}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{corollary}{Corollary}
+\newtheorem*{lemma}{Lemma}
+\title{\textbf{Linear Algebra II}}
+
+\begin{document}
+\maketitle
+\setcounter{section}{5}
+\input{sec6.tex}
+\end{document}

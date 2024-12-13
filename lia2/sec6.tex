@@ -1,0 +1,210 @@
+\section{Inner Product Spaces}
+\setcounter{subsection}{1}
+\setcounter{theorem}{2}
+\subsection{The Gram-Schmidt Orthogonalization Process and Orthogoanl Complements}
+\begin{theorem}
+Let \(V\) be an inner product space and \(S = \{v_1, \ldots, v_n\}\) be a linearly independent set of vectors in \(V\). Then there exists an orthonormal set \(S' = \{v_1, v_2, \ldots, v_k\}\) be an orthogonal subset of \(V\) consisting of nonzero vectors. If \(y \in \text{span}(S)\), then
+\[
+y = \sum_{i=1}^{k} \frac{\langle y, v_i \rangle}{\lVert v_i \rVert ^2}v_i.
+\]
+\end{theorem}
+\vspace{3cm}
+\begin{corollary}
+    If, inaddition to the hypothesis of Theroem 6.3, \(S\) is orthonormal and \(y \in \text{span}(S)\), then
+    \[
+    y = \sum_{i=1}^{k} \langle y, v_i \rangle v_i.
+    \]
+\end{corollary}
+\begin{corollary}
+    Let \(V\) be an inner product space, and let \(S\) be an orthogonal subset of \(V\) consisting of nonzero vectors. Then \(S\) is linearly independent.
+\end{corollary}
+\vspace{2cm}
+\begin{theorem}
+    Let \(V\) be an inner product space and \(S = \{w_1,w_2, \dots, w_n\}\) be a linearly independent subset of \(V\). Define \(S' = \{v_1,v_2, \dots ,v_n\}\), where \(v_1=w_1\) and
+    \[
+    v_k = w_k - \sum_{j=1}^{k-1} \frac{\langle w_k, v_j \rangle}{\lVert v_j \rVert ^2}v_j\hspace{5mm} for\ 2 \leq k \leq n.
+    \]
+    Then \( S'\) is an orthogonal set of nonzero vectors such that \(\text{span}(S') = \text{span}(S)\).
+\end{theorem}
+\vspace{7cm}
+\begin{theorem}
+    Let \(V\) be a nonzero finite-dimensional inner product space. Then \(V\) has an orthonormal basis $\beta$. Furthermore, if \(\beta = \{ v_1, v_2, \dots , v_n\}\) and \(x \in V \), then
+    \[
+    x = \sum_{i=1}^{n} \langle x, v_i \rangle v_i.
+    \]
+\end{theorem}
+\vspace{3cm}
+\begin{corollary}
+    Let \(V\) be a finite-dimensional inner product space with an orthonormal basis \(\beta = \{v_1, v_2, \dots , v_n\}\). Let \(T\) be a linear operator on \(V\), and let \(A = [T]_{\beta}\). Then for any \(i\) and \(j\), \(A_{ij} = \langle T(v_j), v_i \rangle\).
+\end{corollary}
+\vspace{3cm}
+\begin{theorem}
+    Let \(W\) be a finite-dimensional subspace of an inner product space \(V\), and let \(y\in V\). Then there exist unique vectors \(u \in W\) and \(z \in W^{\perp}\) such that \(y = u + z\).
+    Furthermore, if \{\(v_1, v_2, \dots , v_n\)\} is an orthonormal basis for \(W\), then
+    \[
+    u = \sum_{i=1}^{n} \langle y, v_i \rangle v_i.
+    \]
+\end{theorem}
+\vspace{5cm}
+\begin{corollary}
+    In the notation of Theorem 6.6, the vector \(u\) is the unique vector in \(W\) that is closest to \(y\); that is, for any \(x \in W, \lVert y - u \rVert \leq \lVert y - x \rVert\). and this inequality is an equality if and only if \(x = u\).
+\end{corollary}
+\newpage
+\begin{theorem}
+    Suppoes that \(S = \{v_1, v_2, \dots , v_n\}\) is an orthonormal set in an n-dimensional inner product space \(V\). Then
+    \begin{enumerate}
+        \item[(a)] \(S\) can be extended to an orthonormal basis \(\{v_1, v_2, \dots , v_k, v_{k+1}, \dots, v_n \}\) for \(V\).
+        \item If \(W = \text{span}(S)\), then \( S_1 = \{v_k, v_{k+1}, \dots, v_n\} \) is an orthonormal basis for \(W^{\perp}\).
+        \item If \(W\) is any subspaces of \(V\), then \( \dim(V)=\dim(W) + \dim(W^{\perp})\).
+    \end{enumerate}
+\end{theorem}
+\vspace{7cm}
+\subsection{The Adjoint of a Linear Operator}
+\begin{theorem}
+    Let \(V\) be a finite-dimensional inner product space, and let \(g: V \to \mathbb{F}\) be a linear transformation. Then there exists a unique vector \(y \in V\) such that \(g(x) = \langle x, y \rangle\) for all \(x \in V\).
+\end{theorem}
+\vspace{5cm}
+\begin{theorem}
+    Let \(V\) be a finite-dimensional inner product space, and let \(T\) be a linear operator on \(V\). Then there exists a unique linear operator \(T^*: V \to V\) such that \(\langle T(x), y \rangle = \langle x, T^*(y) \rangle\) for all \(x, y \in V\). Furthermore, \(T^*\) is linear.
+\end{theorem}
+\vspace{7cm}
+\begin{theorem}
+    Let \(V\) be a finite-dimensional inner product space, and let \(\beta\) be an orthonormal basis for \(V\). If \(T\) is a linear operator on \(V\), then
+    \[
+    [T^*]_{\beta} = ([T]_{\beta})^*.
+    \]
+\end{theorem}
+\vspace{2cm}
+\begin{corollary}
+    Let \(A\) be an \(n \times n \) matrix. Then \(L_{A^*} = (L_A)^*\).
+\end{corollary}
+\vspace{2cm}
+\begin{theorem}
+    Let \(V\) be a finite-dimensional inner product space, and let \(T\) and \(U\) be linear operators on \(V\). Then
+    \begin{enumerate}
+        \item[(a)] \((T + U)^* = T^* + U^*\);
+        \item[(b)] \((cT)^* = \overline{c}T^*\ for\ any\ c \in F\);
+        \item[(c)] \((TU)^* = U^*T^*\);
+        \item[(d)] \(T^{**} = T\);
+        \item[(e)] \(I^* = I\). 
+    \end{enumerate}
+\end{theorem}
+\newpage
+\begin{lemma}
+    Let \(A \in M_{n \times n}(\mathbb{F}), x\in \mathbb{F}^n\), and \(y \in \mathbb{F}^n\). Then
+    \[
+    \langle Ax, y \rangle_m = \langle x, A^*y \rangle_n.
+    \]
+\end{lemma}
+\vspace{2cm}
+\begin{lemma}
+    Let \(A \in M_{n \times n}(\mathbb{F})\). Then \(\text{rank}(A^*A) = \text{rank}(A)\).
+\end{lemma}
+\vspace{2cm}
+\begin{corollary}
+    If \(A\) is \(m \times n\) matrix such that \(\text{rank}(A) = n\), then \(A^*A\) is invertible.
+\end{corollary}
+\vspace{1cm}
+\begin{theorem}
+    Let \(A \in M_{n \times n}(\mathbb{F})\) and \(y \in \mathbb{F}^n\). Then there exists \(x_0 \in \mathbb{F}^n\) such that \((A^*A)x_0 = A^*y\) and \(\lVert Ax_0 - y \rVert \leq \lVert Ax - y \rVert\) for all \(x \in \mathbb{F}^n\).
+    Furthermore, if \(\text{rank}(A) = n\), then \(x_0 = (A^*A)^{-1}A^*y\).
+\end{theorem}
+\vspace{3cm}
+\begin{theorem}
+    Let \(A \in M_{n \times n}(\mathbb{F})\) and \(b \in \mathbb{F}^n\). Suppose that \(Ax=b\) is consistent. Then the following statements are true.
+    \begin{enumerate}
+        \item There exists exactly one minimal solution \(s\) of \(Ax=b\) and \(s \in R(L_{A^*})\).
+        \item The vectors \(s\) is the only solution of \(Ax=b\) that lies in \(R(L_{A^*})\); that is, if \(u\) satisfies \((AA^*)u = b\), then \(s=A^*u\).
+    \end{enumerate}
+\end{theorem}
+\newpage
+\subsection{Normal and Self-Adjoint Operators}
+\begin{lemma}
+    Let \(T\) be a linear operator on a finite-dimensional inner product space \(V\). If \(T\) has an eigenvector, then so does \(T^*\).
+\end{lemma}
+\vspace{3cm}
+\begin{theorem}[\textbf{Schur}]
+    Let \(T\) be a linear operator on a finite-dimensional inner product space \(V\). Suppose that the characteristic polynomial of \(T\) splits. Then there exists an orthonormal basis \(\beta\) for \(V\) such that the matrix \([T]_{\beta}\) is upper triangular.
+\end{theorem}
+\newpage
+\begin{theorem}
+    Let \(V\) be an inner product space, and let \(T\) be a normal operator on \(V\). Then the following statements are true.
+    \begin{enumerate}
+        \item[(a)] \(\lVert T(x) \rVert = \lVert T^*(x) \rVert\) for all \(x \in V\).
+        \item[(b)] \(T-cI\) is normal for every \(c \in \mathbb{F}\).
+        \item[(c)] If \(x\) is an eigenvector of \(T\), then \(x\) is an eigenvector of \(T^*\). In fact, if \(T(x) = \lambda x\), then \(T^*(x) = \overline{\lambda}x\).
+        \item[(d)] If \(\lambda _1\) and \(\lambda _2\) are distinct eigenvalues of \(T\) with corresponding eigenvectors \(x_1\) and \(x_2\), then \(x_1\) and \(x_2\) are orthogonal.
+    \end{enumerate}
+\end{theorem}
+\vspace{5cm} 
+\begin{theorem}
+    Let \(T\) be a linear operator on a finite-dimensional complex inner product space \(V\). Then \(T\) is normal if and only if there exists an orthonormal basis for \(V\) consisting of eigenvectors of \(T\).
+\end{theorem}
+\newpage
+\begin{lemma}
+    Let \(T\) be a self-adjoint operator on a finite-dimensional inner product space \(V\). Then
+    \begin{enumerate}
+        \item[(a)] Every eigenvalue of \(T\) is real.
+        \item[(b)] Suppose that \(V\) is a real inner product space. Then the characteristic polynomial of \(T\) splits. 
+    \end{enumerate}
+\end{lemma}
+\vspace{7cm}
+\begin{theorem}
+    Let \(T\) be a linear operator on a finite-dimensional real inner product space \(V\). Then \(T\) is self-adjoint if and only if there exists an orthonormal basis \(\beta\) for \(V\) consisting of eigenvectors of \(T\).
+\end{theorem}
+\vspace{3cm}
+\subsection{Unitary and Orthogonal Operators and Their Matrices}
+\begin{lemma}
+    Let \(U\) be a self-adjoint operator on a finite-dimensional inner product space \(V\). If \(\lVert x, U(x) \rVert = 0\) for all \(x \in V\), then \(U = T_0\).
+\end{lemma}
+\vspace{3cm}
+\begin{theorem}
+    Let \(T\) be a linear operator on a finite-dimensional inner product space \(V\). Then the following statements are equivalent.
+    \begin{enumerate}
+        \item[(a)] \(TT^* = T^*T = I\). 
+        \item[(b)] \(\lVert T(x), T(y) \rVert = \lVert x, y \rVert\) for all \(x, y \in V\).
+        \item[(c)] If \(\beta\) is an orthonormal basis for \(V\), then \(T(\beta)\) is an orthonormal basis for \(V\).
+        \item[(d)] There exists an orthonormal basis \(\beta\) for \(V\) such that \(T(\beta)\) is an orthonormal basis for \(V\).
+        \item[(e)] \(\lVert T(x) \rVert = \lVert x \rVert\) for all \(x \in V\).
+    \end{enumerate}
+\end{theorem}
+\newpage
+\begin{corollary}
+    Let \(T\) be a linear operator on a finite-dimensional real inner product space \(V\). Then \(V\) has an orthornormal basis of eigenvector of \(T\) with corresponding eigenvalues of absolute value 1 if and only if \(T\) is both self-adjoint and orthogonal.
+\end{corollary}
+\vspace{5cm}
+\begin{corollary}
+    Let \(T\) be a linear operator on a finite-dimensional complex inner product space \(V\). Then \(V\) has an orthonormal basis of eigenvectors of \(T\) with corresponding eigenvalues of absolute value 1 if and only if \(T\) is unitary
+\end{corollary}
+\vspace{1cm}
+\begin{theorem}
+    Let \(A\) be a complex \(n \times n\) matrix. Then \(A\) is normal if and only if \(A\) is unitarily equivalent to a diagonal matrix.
+\end{theorem}
+\vspace{3cm}
+\begin{theorem}
+    Let \(A\) be a real \(n \times n\) matrix. Then \(A\) is symmetric if and only if \(A\) is orthogonally equivalent to a real diagonal matrix.
+\end{theorem}
+\vspace{1cm}
+\begin{theorem}[\textbf{Shcur}]
+    Let \(A \in M_{n \times n}(F)\) be a matrix whose characteristic polynomial splits over \(\mathbb{F}\).
+    \begin{enumerate}
+        \item[(a)] If \(\mathbb{F} = \mathbb{C}\), thena \(A\) is unitarily equivalent to an upper triangular matrix.
+        \item[(b)] If \(\mathbb{F} = \mathbb{R}\), then \(A\) is orthogonally equivalent to an upper triangular matrix. 
+    \end{enumerate}
+\end{theorem}
+\newpage
+\begin{theorem}
+    Let \(f: V \to V\) be a rigid motion on a finite-dimensional real inner product space \(V\). Then there exists a unique orthogonal operator \(T\) on \(V\) and a unique translation \(g\) on \(V\) such that \(f = g \circ T\).
+\end{theorem}
+\newpage
+\begin{theorem}
+    Let \(T\) be a linear operator on \(\mathbb{R}^2\), and let \(A = [T]_{\beta}\), where \(\beta\) is the standard basis for \(\mathbb{R}^2\). Then exactly one of the following statements is satisfied:
+    \begin{enumerate}
+        \item[(a)] \(T\) is a rotation, and \(\det(A)=1.\)
+        \item[(b)] \(T\) is a reflection about a line through the origin, and \(\det(A)=-1.\)
+    \end{enumerate}
+\end{theorem}
+\vspace{7cm}
+\begin{corollary}
+    Any rigid motion on \(\mathbb{R}^2\) is either a followed by a translation or a reflection about a line through the origin followed by a translation.
+\end{corollary}
