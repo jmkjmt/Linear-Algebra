@@ -7,7 +7,13 @@
 \begin{theorem}
     Elementary matrices are invertible, and the inverse of an elementary matrix is an elementary matrix of the same type.
 \end{theorem}
-
+\begin{quotation}{\textbf{exercise}}
+    \begin{enumerate}
+        \item Prove that any elementary row [column] operation of type 1 can be obtained by a succession of three elementary row [column] operations of type 3 followed by one elementary row [column] operation of type 2. \vspace{5cm}
+        \item Let \(A\) be an \(m \times n\) matrix. Prove that there exists a sequence of elementary row operations of types 1 and 3 that transforms \(A\) into an upper triangular matrix.
+    \end{enumerate}
+\end{quotation}
+\vspace{5cm}
 \subsection{The Rank of a Matrix and Matrix Inverses}
 \begin{theorem}
     Let \( T: V \to W \) be a linear transformation between finite-dimensional vector spaces, and let \( \beta \) and \( \gamma \) be ordered bases for \( V \) and \( W \), respectively. Then 
@@ -130,7 +136,7 @@
 \end{corollary}
 \vspace{4cm}
 \begin{theorem}
-    Gaussian elmiination transforms any matrix into its reduced row echelon form.
+    Gaussian elimination transforms any matrix into its reduced row echelon form.
 \end{theorem}
 \begin{theorem}
     Let \(Ax = b \) be a system of \( r \) nonzero equations in \( n \) unknowns. Suppose that \(\text{rank}(A) = \text{rank}(A|b)\) and that \((A|b)\) is in reduced row echelon form. Then
@@ -145,7 +151,7 @@
 \end{theorem}
 \vspace{5cm}
 \begin{theorem}
-    Let \(A\) be an \(m\times n\) matrix of rank \(r\), where \(r > 0\), and let \( B \) be the reducedc row echelon form of \( A \). Then
+    Let \(A\) be an \(m\times n\) matrix of rank \(r\), where \(r > 0\), and let \( B \) be the reduced row echelon form of \( A \). Then
 \begin{enumerate}
     \item[(a)] The number of nonzero rows in \( B \) is \(r\).
     \item[(b)] For each \( i = 1, 2, \dots , r ,\) there is a column \(b_{j_i}\) of \(B\) such taht \(b_{j_i} = e_i \).
@@ -153,7 +159,8 @@
     \item[(d)] For each \( k = 1, 2, \dots, n \), if column \(k\) of \(B \) is \(d_1 e_1 + d_2 e_2 + \dots + d_r e_r \),then column \( k \) of \(A \) is \(d_1 a_{j_1}+d_2 a_{j_2} + \dots + d_r a_{j_r} \).
 \end{enumerate}
 \end{theorem}
-\begin{theorem}
+\vspace{7cm}
+\begin{corollary}
     The reduce row echelon form of a matrix is unique.
-\end{theorem}
+\end{corollary}
 \vspace{3cm}
