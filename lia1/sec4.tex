@@ -132,3 +132,44 @@
         \item If \(A\) and \(B\) are similar matrices, then \(\det(A) = \det(B)\).
     \end{enumerate}
 \end{quotation}
+\newpage
+\begin{definition}
+    A function \(\delta: M_{n \times n}(\mathbb{F}) \to \mathbb{F}\) is called an \textbf{n-linear function} if it is a linear function of each row of an \( n \times n \) matrix when the remaining \( n-1\) rows are held fixed, that is , \(\delta\) is n-linear if, for every \(r=1,2,\dots ,n\), we have
+    \[
+    \delta \begin{pmatrix} a_1 \\ \vdots \\ a_{r-1} \\ u + kv \\ a_{r+1} \\ \vdots \\ a_n \end{pmatrix}
+    = \delta \begin{pmatrix} a_1 \\ \vdots \\ a_{r-1} \\ u \\ a_{r+1} \\ \vdots \\ a_n \end{pmatrix}
+    + k \delta \begin{pmatrix} a_1 \\ \vdots \\ a_{r-1} \\ v \\ a_{r+1} \\ \vdots \\ a_n \end{pmatrix}
+    \]
+    whenever \(k\) is a scalar and \(u, v,\) and each \(a_i\) are row vectors in \(\mathbb{F}^n\).
+\end{definition}
+\begin{definition}
+    An n-linear function \(\delta: M_{n \times n}(\mathbb{F}) \to \mathbb{F}\) is called an \textbf{alternating} if, for each \(A \in M_{n \times n}(\mathbb{F})\), we have \(\delta(A) = 0\) whenever two adjacent rows of \(A\) are identical.
+\end{definition}
+\begin{theorem}
+    Let \(\delta: M_{n \times n}(\mathbb{F}) \to \mathbb{F}\) be and alternation n-linear function.
+    \begin{enumerate}
+        \item[(a)] If \(A \in M_{n \times n}(\mathbb{F})\) and \(B\) is a matrix obtained from \(A\) by interchanging any two rows of \(A\), then \(\delta(B) = - \delta(A)\).
+        \item[(b)] If \(A \in M_{n \times n}(\mathbb{F})\) has two identical rows, then \(\delta(A) = 0 \). 
+    \end{enumerate}
+\end{theorem}
+\newpage
+\begin{corollary}
+    Let \(\delta: M_{n \times n}(\mathbb{F}) \to \mathbb{F}\) be an alternating n-linear function. If \(B\) is a matrix obtained from \(A \in M_{n \times n}(\mathbb{F})\) by adding a multiple of some row of \(A\) to another row, then \(\delta(B) = \delta(A)\).
+\end{corollary}
+\vspace{3cm}
+\begin{corollary}
+    Let \(\delta: M_{n \times n}(\mathbb{F}) \to \mathbb{F}\) be an alternating n-linear function. If \(M \in M_{n \times n}(\mathbb{F})\) ahs rank less than \(n\), then \(\delta(M) = 0\).
+\end{corollary}
+\vspace{2cm}
+\begin{corollary}
+    Let \(\delta: M_{n \times n}(\mathbb{F}) \to \mathbb{F}\) be an alternating n-linear function, and let \(E_1,E_2, and E_3\) in \(M_{n \times n}(\mathbb{F})\) be elementary matrices of types 1, 2, and 3, respectively. Suppoe that \(E_2\) is obtained by multiplying some for of \(I\) by the nonzero scalar \(k\). Then \(\delta(E_1) = -\delta(I)\), \(\delta(E_2) = k \delta(I)\), and \(\delta(E_3) = \delta(I)\).
+\end{corollary}
+\vspace{2cm}
+\begin{theorem}
+    Let \(\delta: M_{n \times n}(\mathbb{F}) \to \mathbb{F}\) be an alternating n-linear function such that \(\delta(I) = 1\). For any \(A,B \in M_{n \times n}(\mathbb{F})\), we have \(\delta(AB) = \delta(A) \delta(B)\).
+\end{theorem}
+\vspace{2cm}
+\begin{theorem}
+    If \(\delta: M_{n \times n}(\mathbb{F}) \to \mathbb{F}\) is an alternating n-linear function such that \(\delta(I) = 1\), then \(\delta(A) = \det(A)\) for every \(A \in M_{n \times n}(\mathbb{F})\).
+\end{theorem}
+\vspace{5cm}
