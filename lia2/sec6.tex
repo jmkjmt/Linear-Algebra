@@ -129,6 +129,19 @@ y = \sum_{i=1}^{k} \frac{\langle y, v_i \rangle}{\lVert v_i \rVert ^2}v_i.
     \end{enumerate}
 \end{theorem}
 \newpage
+\textbf{exercise}
+\begin{enumerate}
+    \item[6.] Let \(T\) be a linear operator on a inner product space \(V\). Let \(U_1 = T + T^*\) and \(U_2 = TT^*\). Prove that \( U_1 = U_1^*\) and \(U_2 = U_2^*\). \vspace{3cm}
+    \item[8.] Let \(V\) be a finite-dimensional inner product space, and let \(T\) be a linear operator on \(V\). Prove that if \(T\) is invertible, then \(T^*\) is invertible and \((T^*)^{-1} = (T^{-1})^*\). \vspace{3cm}
+    \item[10.] Let \(T\) be a linear operator on an inner product space \(V\). Prove that \(\lVert T(x) \rVert = \lVert x \rVert\) for all \(x \in V\) if and only if \(T\langle T(x), T(y)\rangle = \langle x ,y\rangle\) for all \(x,y,\in V\). \vspace{3cm}
+    \item[13.] :et \(T\) be a linear operator on a finite-demensional inner product space \(V\). Prove the following results.
+    \begin{enumerate}
+        \item[(a)] \(N(T^*T) = N(T)\). Deduce that \(\text{rank}(T^*T) = \text{rank}(T)\).
+        \item[(b)] \(\text{rank}(T) = \text{rank}(T^*)\). Deduce from (a) that \(\text{rank}(TT^*) = \text{rank}(T)\).
+        \item[(c)] For any \(n\times n\) matrix \(A\), \(\text{rank}(A^*A) = \text{rank}(AA^*) = \text{rank}(A)\).
+    \end{enumerate}
+\end{enumerate}
+\newpage
 \subsection{Normal and Self-Adjoint Operators}
 \begin{lemma}
     Let \(T\) be a linear operator on a finite-dimensional inner product space \(V\). If \(T\) has an eigenvector, then so does \(T^*\).
@@ -164,11 +177,31 @@ y = \sum_{i=1}^{k} \frac{\langle y, v_i \rangle}{\lVert v_i \rVert ^2}v_i.
     Let \(T\) be a linear operator on a finite-dimensional real inner product space \(V\). Then \(T\) is self-adjoint if and only if there exists an orthonormal basis \(\beta\) for \(V\) consisting of eigenvectors of \(T\).
 \end{theorem}
 \vspace{3cm}
+\textbf{exercise}
+\begin{enumerate}
+    \item[6.] Let \(V\) be a complex inner product space, and let \(T\) be a linear operator on \(V\). Define
+    \[ T_1 = \frac{1}{2}(T+T^*)\ and\ T_2 = \frac{1}{2i}(T-T^*). \]
+    \begin{enumerate}
+        \item[(a)] Prove that \(T_1\) and \(T_2\) are self-adjoint and that \(T = T_1 + iT_2\).
+        \item[(b)] Suppose also that \(T = U_1 + iU_2\), where \(U_1\) and \(U_2\) are self-adjoint. Prove that \(U_1 = T_1\) and \(U_2 = T_2\).
+        \item[(c)] Prove that \(T\) is normal if and only if \(T_1T_2 = T_2T_1\).
+    \end{enumerate}
+    \newpage
+    \item[7.] Let \(T\) be a linear operator on an inner product space \(V\). and let \(W\) be a \(T\)-invariant subspace of \(V\). Prove the following results.
+    \begin{enumerate}
+        \item[(a)] If \(T\) is self-adjoint, then \(T_W\) is self-adjoint.
+        \item[(b)] \(W^\perp\) is \(T^*\)-invariant.
+        \item[(c)] If \(W\) is both \(T\)- and \(T^*\)-invariant, then \((T_W)^* = (T^*)_W\).
+        \item[(d)] If \(W\) is both \(T\)- and \(T^*\)-invariant, then \(T_W\) is normal.
+    \end{enumerate}
+    \vspace{5cm}
+    \item[9.] Let \(T\) be a normal operator on a finite-dimensional inner product space \(V\). Proe that \(N(T) = N(T^*)\) and \(R(T) = R(T^*)\). \vspace{3cm}
+\end{enumerate}
 \subsection{Unitary and Orthogonal Operators and Their Matrices}
 \begin{lemma}
     Let \(U\) be a self-adjoint operator on a finite-dimensional inner product space \(V\). If \(\lVert x, U(x) \rVert = 0\) for all \(x \in V\), then \(U = T_0\).
 \end{lemma}
-\vspace{3cm}
+\newpage
 \begin{theorem}
     Let \(T\) be a linear operator on a finite-dimensional inner product space \(V\). Then the following statements are equivalent.
     \begin{enumerate}
@@ -219,3 +252,15 @@ y = \sum_{i=1}^{k} \frac{\langle y, v_i \rangle}{\lVert v_i \rVert ^2}v_i.
 \begin{corollary}
     Any rigid motion on \(\mathbb{R}^2\) is either a followed by a translation or a reflection about a line through the origin followed by a translation.
 \end{corollary}
+\textbf{exercise}
+\begin{enumerate}
+    \item[6.] Let \(V\) be the inner product space of complex-valued continuous functions on \([0,1]\) with the inner product
+    \[ \langle f,g \rangle = \int_0^1 f(t)\overline{g(t)} dt. \]
+    Let \(h\in V\), and define \(T:V\to V\) by \(T(f) = hf\). Prove that \(T\) is unitary operator if and only if \(\lVert h(t) \rVert = 1\) for \(0\leq t \leq 1\). \vspace{3cm}
+    \item[7.] Prove that if \(T\) is a unitary operator on a finite-dimensional inner product space \(V\), then \(T\) has a unitary square root: that is, there exists a unitary operator \(U\) such that \(T=U^2\).
+    \item[9.] Let \(U\) be a linear operator on a finite-dimensional inner product space \(V\). If \(\lVert U(x)\rVert = \lVert x \rVert\) for all \(x\) in some otrhonormal basis for \(V\), must \(U\) be unitary? Justify your answer. \vspace{3cm}
+    \item[10.] Let \(A\) be an \(n \times n\) real symmetric or complex normal matrix. Prove that
+    \[ \text{tr}(A) = \sum_{i=1}^{n}\lambda_i \ \text{and} \ \text{tr}(A^*A) = \sum_{i=1}^{n}|\lambda_i|^2,\]
+    where the \(\lambda_i\)'s are the (not necessarily distinct) eigenvalues of \(A\). \vspace{3cm}
+    \item[17.] Prove that a matrix that is both unitary and upper triangular must be a diagonal matrix. \vspace{2cm}
+\end{enumerate}
